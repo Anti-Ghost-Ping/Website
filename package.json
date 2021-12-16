@@ -1,0 +1,26 @@
+{
+  "name": "agp-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sass/styles.scss",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/styles.scss static/css/bulma.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leastrio/AGP-Site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leastrio/AGP-Site/issues"
+  },
+  "homepage": "https://github.com/Leastrio/AGP-Site#readme",
+  "devDependencies": {
+    "bulma": "^0.9.3",
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {}
+}

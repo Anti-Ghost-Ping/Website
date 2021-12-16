@@ -1,0 +1,7 @@
+node_modules
+sass
+target
+flake.nix
+flake.lock
+package.json
+package-lock.json

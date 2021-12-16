@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+$navbar-background-color: #262f3b;
+$navbar-item-color: white;
+$navbar-item-hover-color: #202731;
+
+$footer-background-color: #202731;
+
+$button-background-color: #FA7268;
+$button-border-color: #FA7268;
+$button-hover-border-color: #FA7268;
+$button-color: white;
+$button-hover-color: white;
+
+$card-background-color: #6281C0;
+$card-color: white;
+$card-shadow: 5px;
+$card-radius: 1.50rem;
+
+$spacing-values: ("paragraph": 120px, "footer": 1.5rem, "hero": 1.5rem);
+
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/helpers/spacing.sass";
+@import "../node_modules/bulma/sass/helpers/typography.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/icon.sass";
+@import "../node_modules/bulma/sass/layout/footer.sass";
+@import "../node_modules/bulma/sass/grid/columns.sass";
+@import "../node_modules/bulma/sass/elements/notification.sass";
+@import "../node_modules/bulma/sass/components/card.sass";

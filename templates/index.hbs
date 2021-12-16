@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anti Ghost Ping</title>
+    <link rel="icon" href="static/assets/bot_logo.ico">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ghostping.xyz/">
+    <meta property="og:title" content="Anti Ghost Ping | Discord Ghost Ping Detection">
+    <meta property="og:description" content="Anti Ghost Ping detects ghost pings then sends a message containing the message contents and more!">
+    <meta property="og:image" content="static/assets/bot_logo.ico">
+    <meta property="theme-color" content="#AD91FF" />
+    <meta name="Description" content="Anti Ghost Ping is a discord bot made to catch ghost pingers and put them in the spot. Whenever a ghost ping occurs the bot will detect it and send a message containing lots of info about the message.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/37333db698.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/bulma.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="static/css/styles.css" media="screen" />
+    <script type="module">
+      import { CountUp } from './static/js/countUp.min.js';
+      const options = {
+        duration: 4.7,
+      }
+      window.onload = function() {
+          console.log("Window loaded");
+          var g_pings = new CountUp('ghost-pings', {{ ghost-pings }}, options);
+          var g_count = new CountUp('guild-count', {{ server-count }}, options);
+          g_pings.start()
+          g_count.start()
+          console.log("Counters started");
+        }
+    </script>
+  </head>
+  <body>
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://ghostping.xyz">
+          <img src="static/assets/bot_logo.png">
+        </a>
+      </div>
+    
+      <div id="navbarButtons" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="https://ghostping.xyz/invite">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-user-plus"></i>
+              </span>
+              <span>Invite</span>
+            </span>
+          </a>
+
+          <a class="navbar-item" href="https://ghostping.xyz/discord">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-question"></i>
+              </span>
+              <span>Support</span>
+            </span>
+          </a>
+
+          <a class="navbar-item">
+            <span class="icon-text">
+              <span class="icon">
+                <i class="fas fa-book-open"></i>
+              </span>
+              <span>Commands (Coming Soon!)</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <h1>Anti Ghost Ping</h1>
+      <p>The #1 Discord bot for catching ghost pings</p>
+      <div class="buttons pt-hero">
+        <a href="https://ghostping.xyz/invite" class="button is-rounded">
+          <strong>Get Started</strong>
+        </a>
+      </div>
+    </section>
+
+    <section class="primary-color">
+      <div class="columns is-centered w-50 pt-paragraph">
+        <div class="column has-text-centered is-one-third">
+          <h2>Servers</h2>
+          <p id="guild-count" class="stat">9629</p>
+        </div>
+        <div class="column"></div>
+        <div class="column has-text-centered is-one-third">
+          <h2>Ghost Pings</h2>
+          <p id="ghost-pings" class="stat">1385024</p>
+        </div>
+      </div>
+
+      <div class="wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+      </div>
+    </section>
+
+    <div class="spacer layer1"></div>
+
+    <section>
+      <h1 id="features" style="position: absolute;top: -50px;">Features</h1>
+      <div class="columns w-100">
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <img src="static/assets/features/setchannel.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered card-footer-text">
+                Configure a channel for all ghost ping alerts to get sent to!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <img src="static/assets/features/etoggle.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered card-footer-text">
+                Catch @everyone and @here ghost pings!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <img src="static/assets/features/setcolor.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered card-footer-text">
+                Customize the color of alerts!
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <img src="static/assets/features/mentiononly.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="card-content">
+              <div class="content has-text-centered card-footer-text">
+                Protect the content of your members messages and show only mentions!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <div class="spacer layer2 flip"></div>
+
+    <section class="primary-color" style="overflow: hidden;">
+      <div class="blob-content">
+        <h1 class="has-text-centered">Anti Ghost Ping is powered by <a href="https://dedimc.promo/ghostping" class="is-underlined" style="color: white;"><img src="https://i.dedimc.io/DedicatedMC.io%20Logo%20Small.svg" width="85px" height="85px" style="position: relative;top: 20px;">DedicatedMC.io</a></h1>
+        <p class="px-paragraph has-text-centered" style="font-size: 2rem;">DedicatedMC has premium discord bot hosting for only $5 / 3 months and amazing minecraft server hosting which gives you all the power you need for a minecraft server. Use code <code class="html">ghostping</code> on your next order to gain 15% off your first month.</p>
+      </div>
+
+    </section>
+
+    <div class="spacer layer3"></div>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <a class="mx-footer" href="https://twitter.com/AntiGhostPing">
+            <span class="icon-text footer-text">
+              <span class="icon">
+                <i class="fab fa-twitter mr-footer"></i>
+              </span>
+              <span>Twitter</span>
+            </span>
+          </a>
+          <a class="mx-footer" href="https://ghostping.xyz/discord">
+            <span class="icon-text footer-text">
+              <span class="icon">
+                <i class="fab fa-discord mr-footer"></i>
+              </span>
+              <span>Support</span>
+            </span>
+          </a>
+          <a class="mx-footer" href="https://ghostping.xyz/invite">
+            <span class="icon-text footer-text">
+              <span class="icon">
+                <i class="fas fa-plus mr-footer"></i>
+              </span>
+              <span>Invite</span>
+            </span>
+          </a>
+          <a class="mx-footer" href="https://github.com/Anti-Ghost-Ping/bug-reports">
+            <span class="icon-text footer-text">
+              <span class="icon">
+                <i class="fas fa-bug mr-footer"></i>
+              </span>
+              <span>Bug Report</span>
+            </span>
+          </a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+p {
+  font-size: 2.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  background: #202731;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding-top: 100px;
+}
+
+.primary-color {
+  background: #6281C0;
+}
+
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(103% + 1.3px);
+  height: 262px;
+}
+
+.wave .shape-fill {
+  fill: #202731;
+}
+
+.spacer {
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url('../assets/layer1.svg');
+}
+.layer2 {
+  background-image: url('../assets/layer2.svg');
+}
+
+.layer3 {
+  background-image: url('../assets/layer3.svg');
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+.footer-text {
+  color: white;
+  font-size: 2rem;
+}
+
+.footer-text:hover {
+  color: #FA7268;
+}
+
+.w-50 {
+  width: 50%;
+}
+.w-100 {
+  width: 100%;
+}
+
+.stat {
+  opacity: 0.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding-top: 0.5em;
+}
+
+.card-footer-text {
+  font-size: 1.25rem;
+}
