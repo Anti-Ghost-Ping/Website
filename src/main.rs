@@ -28,7 +28,6 @@ pub async fn index(stats: &State<Arc<Stats>>) -> Template {
 async fn rocket() -> _ {
     let file = fs::read_to_string("stats.json").expect("Unable to read file");
     let stats: Arc<Stats> = Arc::new(serde_json::from_str(&file).expect("Could not parse json"));
-    println!("{:#?}", stats);
     dotenv::dotenv().ok();
     rocket::build()
         .attach(Template::fairing())
@@ -42,7 +41,7 @@ async fn rocket() -> _ {
             |_| {
                 Box::pin(async move {
                     rocket::tokio::spawn(async move {
-                        let mut interval = rocket::tokio::time::interval(Duration::from_secs(10));
+                        let mut interval = rocket::tokio::time::interval(Duration::from_secs(600));
                         interval.tick().await;
                         loop {
                             interval.tick().await;
