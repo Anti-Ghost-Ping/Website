@@ -54,7 +54,7 @@ pub async fn get_stats(stats: &State<Arc<Stats>>) -> Option<Value> {
     }))
 }
 
-#[post("/stats", format = "json", data = "<post>")]
+#[patch("/stats", format = "json", data = "<post>")]
 pub async fn add_stats(stats: &State<Arc<Stats>>, post: Json<PostData>, _key: ApiKey) -> Value {
     stats
         .guild_count
