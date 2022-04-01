@@ -7,7 +7,6 @@ edition = "2018"
 
 [dependencies]
 serde_json = "1.0.48"
-dotenv = "0.15.0"
 
 [dependencies.rocket]
 version = "0.5.0-rc.1"

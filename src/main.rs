@@ -28,7 +28,6 @@ pub async fn index(stats: &State<Arc<Stats>>) -> Template {
 async fn rocket() -> _ {
     let file = fs::read_to_string("stats.json").expect("Unable to read file");
     let stats: Arc<Stats> = Arc::new(serde_json::from_str(&file).expect("Could not parse json"));
-    dotenv::dotenv().ok();
     rocket::build()
         .attach(Template::fairing())
         .attach(info::stage())
