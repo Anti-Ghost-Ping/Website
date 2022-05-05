@@ -33,7 +33,7 @@ impl<'r> FromRequest<'r> for ApiKey {
 
     async fn from_request(req: &'r Request<'_>) -> request::Outcome<Self, ()> {
         let key = env::var("API_KEY").unwrap();
-        if let Some(header) = req.headers().get_one("API_KEY") {
+        if let Some(header) = req.headers().get_one("Authorization") {
             if header == key {
                 return Outcome::Success(ApiKey);
             } else {
